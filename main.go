@@ -33,7 +33,8 @@ func klingonTranslation(characterName string) {
 	characterNamePreDecode := util.PreDecode(characterName)
 
 	//Get the character specie through Stapi (character search and character UID)
-	specie, err := stapi.GetSpecieCharacter(characterName)
+	sp, err := stapi.GetSpecieCharacter(characterName)
+	specie = sp
 	if err != nil {
 		log.Fatalln(fmt.Sprintf("Error found: %s", err.Error()))
 	}
