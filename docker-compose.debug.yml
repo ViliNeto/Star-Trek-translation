@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  star-trek-translation:
+    image: star-trek-translation
+    build:
+      context: .
+      dockerfile: Dockerfile
