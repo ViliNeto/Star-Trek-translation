@@ -38,8 +38,6 @@ func klingonTranslation(characterName string) {
 		log.Fatalln(fmt.Sprintf("Error found: %s", err.Error()))
 	}
 
-	//Original input
-	fmt.Println(characterName)
 	//Hexadecimal output (Using strings join to remove the braces on this array otherwise the output would be something like [0xF8E5, 0x​F8D6, ​​​0xF8E5, ​​0xF8E1, 0xF8D0])
 	fmt.Println(strings.Join(util.TranslateToHexadecimal(characterNamePreDecode), ", "))
 	//Char specie
