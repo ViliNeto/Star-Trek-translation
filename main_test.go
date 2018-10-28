@@ -16,13 +16,13 @@ func TestMain(t *testing.T) {
 	if specie == "Human" && strings.Join(util.TranslateToHexadecimal(characterNamePreDecode), ", ") == "​​​0xF8E5, 0x​F8D6, ​​​0xF8E5, ​​0xF8E1, 0xF8D0" {
 		fmt.Println("PASSED: Uhura is Human")
 	}
-	//UhLoren Shriver exists but will not find a specie
+	//Loren Shriver exists but will not find a specie
 	klingonTranslation("Loren Shriver")
 	characterNamePreDecode = util.PreDecode("Loren Shriver")
 	if specie == "Specie Not found..." && strings.Join(util.TranslateToHexadecimal(characterNamePreDecode), ", ") == "0x​F8D9, 0x​F8DD, ​​0xF8E1, 0xF8D4, 0x​F8DB, 0x0020, ​​​0xF8E2, 0x​F8D6, ​​0xF8E1, 0x​F8D7, , 0xF8D4, ​​0xF8E1" {
 		fmt.Println("PASSED: Loren Shriver has no specie registered")
 	}
-	//Dwuast does not exists [I made that name, sorry. =) ]
+	//Dwuas does not exists [I made that name, sorry. =) ]
 	klingonTranslation("Dwuas")
 	characterNamePreDecode = util.PreDecode("Dwuas")
 	if specie == "Specie Not found..." && strings.Join(util.TranslateToHexadecimal(characterNamePreDecode), ", ") == "0xF8D3, 0x​​​F8E7, ​​​0xF8E5, 0xF8D0, ​​​0xF8E2" {
